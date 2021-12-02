@@ -5,12 +5,13 @@ using UnityEngine.UI;
 
 public class LockPassCode : MonoBehaviour
 {
-    private static string correctCode = "1234";
+    private static string correctCode = "3471";
     public string code;
     public GameObject inputField;
     public GameObject textDispaly;
     public GameObject form;
     [SerializeField] public Animator unlockAnim;
+    [SerializeField] public Animator shelfAnim;
 
     public void Start()
     {
@@ -29,6 +30,7 @@ public class LockPassCode : MonoBehaviour
         {
             textDispaly.GetComponent<Text>().text = "Correct";
             unlockAnim.SetBool("unlock", true);
+            shelfAnim.SetBool("shelf_open.002", true);
         }
         else
         {
