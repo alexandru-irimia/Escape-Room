@@ -919,6 +919,7 @@ m_PackageAssets:
         - 1.0.0-pre.5
         - 1.0.0-pre.6
         - 1.0.0-pre.8
+        - 2.0.0-pre.5
         compatible:
         - 0.0.6-preview
         - 0.9.0-preview
@@ -934,6 +935,7 @@ m_PackageAssets:
         - 1.0.0-pre.5
         - 1.0.0-pre.6
         - 1.0.0-pre.8
+        - 2.0.0-pre.5
         verified: 
       dependencies:
       - name: com.unity.inputsystem
