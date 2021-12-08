@@ -8,6 +8,9 @@ public class MenuManager : MonoBehaviour
     public AudioManager audioManager;
     public Toggle musicToggle;
 
+    public GameObject mainMenuCanvas;
+    public GameObject storyCanvas;
+
     public void toggleMusic()
     {
         if(! musicToggle.isOn){
@@ -17,4 +20,18 @@ public class MenuManager : MonoBehaviour
 
         audioManager.Play("MainTheme");
     }
+
+
+    public void goToStory()
+    {
+        mainMenuCanvas.SetActive(false);
+        storyCanvas.SetActive(true);
+    }
+
+    public void goBackToMainMenu()
+    {
+        mainMenuCanvas.SetActive(true);
+        storyCanvas.SetActive(false);
+    }
+
 }
