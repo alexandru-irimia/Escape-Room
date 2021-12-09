@@ -322,8 +322,10 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.SpatialTracking.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.XR.LegacyInputHelpers.ref.dll"
+"Assets/Scripts/CharacterControllerHelper.cs"
 "Assets/Scripts/HandsAnimationScript/Hand.cs"
 "Assets/Scripts/HandsAnimationScript/HandController.cs"
+"Assets/Scripts/LockPassCode3.cs"
 "Assets/Scripts/SceneSwitcher.cs"
 -langversion:8.0
 
