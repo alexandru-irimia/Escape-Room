@@ -7,6 +7,7 @@ public class PicturePieceMover : MonoBehaviour
     public GameObject cubeForRotation;  // (-90, 180, -180)
     public GameObject controller1; // XR Rig -> Camera Offset -> Left/Right Hand Controller
     public GameObject controller2;
+    public AudioSource audioSource; // PlayOnAwayke = false
 
     private bool found = false;
     
@@ -24,7 +25,9 @@ public class PicturePieceMover : MonoBehaviour
             if((Vector3.Distance(transform.position, controller1.transform.position) < min_distance) ||
                (Vector3.Distance(transform.position, controller2.transform.position) < min_distance)) {
                 found = true;
+
                 (GetComponent("XRGrabInteractable") as MonoBehaviour).enabled = false;
+                audioSource.Play();
             } 
         }
 
