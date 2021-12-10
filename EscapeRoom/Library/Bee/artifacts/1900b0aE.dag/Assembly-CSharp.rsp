@@ -325,6 +325,7 @@
 "Assets/Scripts/CharacterControllerHelper.cs"
 "Assets/Scripts/HandsAnimationScript/Hand.cs"
 "Assets/Scripts/HandsAnimationScript/HandController.cs"
+"Assets/Scripts/LockPassCode1.cs"
 "Assets/Scripts/LockPassCode3.cs"
 "Assets/Scripts/SceneSwitcher.cs"
 -langversion:8.0
