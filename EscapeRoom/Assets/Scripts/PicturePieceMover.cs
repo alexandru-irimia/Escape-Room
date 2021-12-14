@@ -4,18 +4,21 @@ using UnityEngine;
 
 public class PicturePieceMover : MonoBehaviour
 {
-    public GameObject cubeForRotation;  // (-90, 180, -180)
+    public GameObject rotationCubeForPiece;  // (-90, 180, -180) adaugat in 'picture_frame'
+    public GameObject rotationCubeForDoor;  // (0, 280, 0) adaugat in 'door'
     public GameObject controller1; // XR Rig -> Camera Offset -> Left/Right Hand Controller
     public GameObject controller2;
-    public AudioSource audioSource; // PlayOnAwayke = false
+    public GameObject door; // Door_Cube.001
+    public GameObject wallOverDoor; // Wall 5
+    public AudioSource audioPieceFound; // PlayOnAwayke = false
+    public AudioSource audioGameWin; // PlayOnAwayke = false
 
     private bool found = false;
-    
-    private BoxCollider myCollider;
+    private static int countPiecesFound = 0;
 
     void Start()
     {
-        myCollider = GetComponent<BoxCollider>();
+
     }
 
     void Update()
@@ -27,13 +30,16 @@ public class PicturePieceMover : MonoBehaviour
                 found = true;
 
                 (GetComponent("XRGrabInteractable") as MonoBehaviour).enabled = false;
-                audioSource.Play();
+
+                checkToOpenDoor();
+
+                makeSound();
             } 
         }
 
         if (found){
             transform.localPosition = getPosition();
-            transform.rotation = cubeForRotation.transform.rotation;
+            transform.rotation = rotationCubeForPiece.transform.rotation;
         }
     }
 
@@ -46,6 +52,23 @@ public class PicturePieceMover : MonoBehaviour
             case 2: return new Vector3(-0.65f, 1f, -42f);
             case 3: return new Vector3(0.5f, 1f, -42f);
             default: return new Vector3(-2.3f, 1f, -42f);
+        }
+    }
+
+    void checkToOpenDoor() {
+        countPiecesFound ++;
+        if (countPiecesFound == 3) {
+            door.transform.rotation = rotationCubeForDoor.transform.rotation;
+            wallOverDoor.GetComponent<BoxCollider>().enabled = false;
+        }
+    }
+
+    void makeSound() {
+        if(countPiecesFound <= 2) {
+            audioPieceFound.Play();
+        } 
+        else {
+            audioGameWin.Play();
         }
     }
 }
