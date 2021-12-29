@@ -10,6 +10,8 @@ public class padlock3Code : MonoBehaviour
     public GameObject inputField;
     public GameObject textDispaly;
     public GameObject form;
+    public GameObject picturePiece2;  // trebuie dezactivat din Unity XRGrabInteractable mai intai
+    public GameObject padlock3; 
     [SerializeField] public Animator unlockAnim;
     [SerializeField] public Animator shelfAnim;
 
@@ -32,6 +34,9 @@ public class padlock3Code : MonoBehaviour
             unlockAnim.SetBool("unlock", true);
             shelfAnim.SetBool("OpenDrawer", true);
             form.GetComponent<Canvas>().enabled = false;
+
+            padlock3.SetActive(false);
+            (picturePiece2.GetComponent("XRGrabInteractable") as MonoBehaviour).enabled = true;
         }
         else
         {
