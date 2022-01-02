@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class MenuManager : MonoBehaviour
 {
@@ -21,17 +23,20 @@ public class MenuManager : MonoBehaviour
         audioManager.Play("MainTheme");
     }
 
-
-    public void goToStory()
+    public void setVolume(float volume)
     {
-        mainMenuCanvas.SetActive(false);
-        storyCanvas.SetActive(true);
+        audioManager.setVolume("MainTheme", volume);
     }
 
-    public void goBackToMainMenu()
+    public void playGame()
     {
-        mainMenuCanvas.SetActive(true);
-        storyCanvas.SetActive(false);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void quitGame()
+    {
+        Debug.Log("QUIT");
+        Application.Quit();
     }
 
 }

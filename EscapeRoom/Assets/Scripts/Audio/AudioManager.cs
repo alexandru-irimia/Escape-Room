@@ -66,4 +66,13 @@ public class AudioManager : MonoBehaviour
 
         return sound;
     }
+
+    public void setVolume(string name, float volume)
+    {
+        Sound sound = findSound(name);
+        
+        sound.source.volume = volume;
+
+        Debug.Log(sound.volume);
+    }
 }
