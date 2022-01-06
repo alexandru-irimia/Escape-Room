@@ -14,6 +14,7 @@ public class padlock3Code : MonoBehaviour
     public GameObject padlock3; 
     [SerializeField] public Animator unlockAnim;
     [SerializeField] public Animator shelfAnim;
+    public AudioSource auido;
 
     public void Start()
     {
@@ -37,6 +38,7 @@ public class padlock3Code : MonoBehaviour
 
             padlock3.SetActive(false);
             (picturePiece2.GetComponent("XRGrabInteractable") as MonoBehaviour).enabled = true;
+            auido.Play();
         }
         else
         {

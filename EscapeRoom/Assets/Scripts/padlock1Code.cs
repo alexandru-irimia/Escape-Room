@@ -13,7 +13,8 @@ public class padlock1Code : MonoBehaviour
     public GameObject form;
     public GameObject clipboard; // trebuie dezactivat din Unity XRGrabInteractable mai intai
     public GameObject picturePiece1; // trebuie dezactivat din Unity XRGrabInteractable mai intai
-    public GameObject padlock1; 
+    public GameObject padlock1;
+    public AudioSource audio;
     [SerializeField] public Animator unlockAnim;
     [SerializeField] public Animator shelfAnim;
 
@@ -42,6 +43,7 @@ public class padlock1Code : MonoBehaviour
 
             (picturePiece1.GetComponent("XRGrabInteractable") as MonoBehaviour).enabled = true;
             (clipboard.GetComponent("XRGrabInteractable") as MonoBehaviour).enabled = true;
+            audio.Play();
         }
         else
         {
