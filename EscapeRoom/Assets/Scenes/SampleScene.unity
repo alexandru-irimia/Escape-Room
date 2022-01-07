@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6104,30 +6104,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!1 &1053191746 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -7146521406498821007, guid: 7866cfc2fde2c5744892beccff0364c2, type: 3}
-  m_PrefabInstance: {fileID: 1704441067}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &1053191748
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1053191746}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: bbea6ea9745151947a544c362cedad85, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1070882873
 GameObject:
   m_ObjectHideFlags: 0
@@ -9315,7 +9291,7 @@ MonoBehaviour:
   padlock1: {fileID: 1899490923}
   audio: {fileID: 1224810977}
   unlockAnim: {fileID: 1899490924}
-  shelfAnim: {fileID: 1053191748}
+  shelfAnim: {fileID: 8551312}
 --- !u!224 &1564781134
 RectTransform:
   m_ObjectHideFlags: 0
