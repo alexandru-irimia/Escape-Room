@@ -36,7 +36,7 @@ public class padlock2Code : MonoBehaviour
         {
             textDispaly.GetComponent<Text>().text = "Correct";
             unlockAnim.SetBool("unlock", true);
-            shelfAnim.SetBool("OpenBookShelf1", true);
+            shelfAnim.SetBool("OpenBookShelf2", true);
             form.GetComponent<Canvas>().enabled = false;
 
             // padlock1.transform.position += new Vector3(0.9f, 0f, 0f); // se muta instant si nush cum sa il fac sa se mute odata cu animatia
