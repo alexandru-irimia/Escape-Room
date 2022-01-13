@@ -17,7 +17,8 @@ public class SceneSwitcher : MonoBehaviour
 
     public void goToMeniu()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
+        Debug.Log("Press");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 
     public void quitGame()
